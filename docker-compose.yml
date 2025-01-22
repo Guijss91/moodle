@@ -10,7 +10,7 @@ services:
     volumes:
       - mariadb_data:/bitnami/mariadb
     ports:
-      - "3306:3306" # Adicionado no lugar correto
+      - "3306:3306" 
   moodle:
     image: docker.io/bitnami/moodle:4.5
     ports:
