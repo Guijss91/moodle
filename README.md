@@ -1,2 +1,2 @@
-User padrão - user /n-----------------
+User padrão - user ----------------- 
 Senha padrão - bitnami
