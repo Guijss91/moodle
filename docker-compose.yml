@@ -1,6 +1,6 @@
 services:
   moodle:
-    image: docker.io/bitnami/moodle:4.5
+    image: bitnami/moodle:4.5.1
     ports:
       - "87:8080"
       - "444:8443"
