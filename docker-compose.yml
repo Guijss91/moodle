@@ -5,7 +5,7 @@ services:
       - "87:8080"
       - "444:8443"
     environment:
-      MOODLE_DATABASE_HOST: "easypanel.ljit.com.br"
+      MOODLE_DATABASE_HOST: "198.7.124.122"
       MOODLE_DATABASE_PORT_NUMBER: "3306"
       MOODLE_DATABASE_USER: "mariadb"
       MOODLE_DATABASE_PASSWORD: "bebb3466b9d00ff790dd" 
