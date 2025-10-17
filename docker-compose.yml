@@ -14,7 +14,7 @@ services:
       - mariadb_data:/bitnami/mariadb
 
   moodle:
-    image: bitnami/moodle:4.1.1-debian-11-r6
+    image: moodlehq/moodle-php-apache:8.3
     ports:
       - '81:8080'
       - '444:8443'
