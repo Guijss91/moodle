@@ -10,7 +10,7 @@ services:
       MOODLE_DATABASE_PORT_NUMBER: 5432
       MOODLE_DATABASE_USER: postgres
       MOODLE_DATABASE_PASSWORD: 76c36b3f2dce4bf58be9
-      MOODLE_DATABASE_NAME: moodle_db
+      MOODLE_DATABASE_NAME: laboratorio
       MOODLE_USERNAME: easjur
       MOODLE_PASSWORD: 76c36b3f2dce4bf58be9
       MOODLE_EMAIL: admin@example.com
