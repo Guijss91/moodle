@@ -5,7 +5,7 @@ services:
       - '81:8080'
       - '444:8443'
     environment:
-      MOODLE_DATABASE_HOST: seu-host-mariadb.com
+      MOODLE_DATABASE_HOST: laboratorio_moodle-db
       MOODLE_DATABASE_PORT_NUMBER: 3306
       MOODLE_DATABASE_USER: moodle_user
       MOODLE_DATABASE_PASSWORD: 3f4387e0fb5b40272c4c
