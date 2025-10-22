@@ -9,11 +9,6 @@ services:
       MARIADB_COLLATE: utf8mb4_unicode_ci
     volumes:
       - mariadb_data:/bitnami/mariadb
-    healthcheck:
-      test: ['CMD', '/opt/bitnami/scripts/mariadb/healthcheck.sh']
-      interval: 15s
-      timeout: 5s
-      retries: 6
 
   moodle:
     image: public.ecr.aws/bitnami/moodle:latest
@@ -30,13 +25,12 @@ services:
       MOODLE_USERNAME: admin
       MOODLE_PASSWORD: bitnami123
       MOODLE_EMAIL: admin@example.com
-      MOODLE_SKIP_BOOTSTRAP: 'no'
     volumes:
       - moodle_data:/bitnami/moodle
       - moodledata_data:/bitnami/moodledata
     depends_on:
-      mariadb:
-        condition: service_healthy
+      - mariadb
+    restart: unless-stopped
 
 volumes:
   mariadb_data:
