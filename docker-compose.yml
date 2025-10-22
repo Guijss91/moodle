@@ -1,40 +1,25 @@
 services:
-  mariadb:
-    image: public.ecr.aws/bitnami/mariadb:latest
-    environment:
-      ALLOW_EMPTY_PASSWORD: 'yes'
-      MARIADB_USER: bn_moodle
-      MARIADB_DATABASE: bitnami_moodle
-      MARIADB_CHARACTER_SET: utf8mb4
-      MARIADB_COLLATE: utf8mb4_unicode_ci
-    volumes:
-      - mariadb_data:/bitnami/mariadb
-
   moodle:
     image: public.ecr.aws/bitnami/moodle:latest
     ports:
       - '81:8080'
-      - '444:443'
+      - '444:8443'
     environment:
-      MOODLE_DATABASE_HOST: mariadb
+      MOODLE_DATABASE_HOST: seu-host-mariadb.com
       MOODLE_DATABASE_PORT_NUMBER: 3306
-      MOODLE_DATABASE_USER: bn_moodle
-      MOODLE_DATABASE_NAME: bitnami_moodle
-      MOODLE_DATABASE_PASSWORD: ''
-      ALLOW_EMPTY_PASSWORD: 'yes'
-      MOODLE_USERNAME: admin
-      MOODLE_PASSWORD: bitnami123
+      MOODLE_DATABASE_USER: moodle_user
+      MOODLE_DATABASE_PASSWORD: 3f4387e0fb5b40272c4c
+      MOODLE_DATABASE_NAME: moodle_db
+      MOODLE_USERNAME: easjur
+      MOODLE_PASSWORD: dpdf@2024
       MOODLE_EMAIL: admin@example.com
+      MOODLE_SITE_NAME: "Moodle"
     volumes:
       - moodle_data:/bitnami/moodle
       - moodledata_data:/bitnami/moodledata
-    depends_on:
-      - mariadb
     restart: unless-stopped
 
 volumes:
-  mariadb_data:
-    driver: local
   moodle_data:
     driver: local
   moodledata_data:
