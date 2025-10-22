@@ -1,8 +1,6 @@
-version: '3.8'
-
 services:
   mariadb:
-    image: docker.io/bitnami/mariadb:11.4
+    image: bitnami/mariadb:latest
     environment:
       # ALLOW_EMPTY_PASSWORD é recomendado apenas para desenvolvimento
       ALLOW_EMPTY_PASSWORD: 'yes'
@@ -14,7 +12,7 @@ services:
       - mariadb_data:/bitnami/mariadb
 
   moodle:
-    image: docker.io/bitnami/moodle:4.5.0
+    image: bitnami/moodle:latest
     ports:
       - '81:8080'
       - '444:8443'
