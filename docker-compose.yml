@@ -6,15 +6,15 @@ services:
       - '444:8443'
     environment:
       MOODLE_DATABASE_TYPE: pgsql
-      MOODLE_DATABASE_HOST: seu-host-postgres.com
+      MOODLE_DATABASE_HOST: laboratorio_moodle-postgres-db
       MOODLE_DATABASE_PORT_NUMBER: 5432
-      MOODLE_DATABASE_USER: moodle_user
-      MOODLE_DATABASE_PASSWORD: sua_senha_segura
+      MOODLE_DATABASE_USER: postgres
+      MOODLE_DATABASE_PASSWORD: 76c36b3f2dce4bf58be9
       MOODLE_DATABASE_NAME: moodle_db
-      MOODLE_USERNAME: admin
-      MOODLE_PASSWORD: Admin@123
+      MOODLE_USERNAME: easjur
+      MOODLE_PASSWORD: 76c36b3f2dce4bf58be9
       MOODLE_EMAIL: admin@example.com
-      MOODLE_SITE_NAME: "Meu Moodle"
+      MOODLE_SITE_NAME: "Moodle"
     volumes:
       - moodle_data:/bitnami/moodle
       - moodledata_data:/bitnami/moodledata
