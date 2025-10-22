@@ -14,7 +14,7 @@ services:
     image: public.ecr.aws/bitnami/moodle:latest
     ports:
       - '81:8080'
-      - '444:8443'
+      - '444:443'
     environment:
       MOODLE_DATABASE_HOST: mariadb
       MOODLE_DATABASE_PORT_NUMBER: 3306
